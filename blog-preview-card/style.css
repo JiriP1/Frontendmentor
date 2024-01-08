@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary colors */
+--Yellow: hsl(47, 88%, 63%);
+
+    /* neutral colors */
+--White: hsl(0, 0%, 100%);
+--Grey: hsl(0, 0%, 50%);
+--Black: hsl(0, 0%, 7%);
+
+    /* font */
+--font-family: 'Figtree';
+--font-weight-semi-bold: 600;
+--font-weight-extra-bold: 800;
+}
+
+/* reusable classes */
+.semi-bold-text {
+    font-weight: var(--font-weight-semi-bold);
+}
+.extra-bold-text {
+    font-weight: var(--font-weight-extra-bold);
+}
+
+
+
+body {
+    font-size: 1rem;
+    font-family: var(--font-family);
+    background-color: var(--Yellow);
+    height: 100dvh;
+    display: grid;
+    grid-template-rows: auto min-content;
+    align-items: center;
+    justify-content: center;
+}
+/* .container > * {
+    border: 2px solid red;
+} */
+
+
+/* card */
+.card {
+    width: min-content;
+    padding: 1rem;
+    border: 1px solid var(--Black);
+    background-color: var(--White);
+    border-radius: 20px;
+    box-shadow: 10px 10px  var(--Black);
+    transition: 1s;/* box-shadow  slow-out */
+    display: grid;
+    gap: 1rem;
+}
+
+/* container for the image of the card */
+.image-container {
+    width: fit-content;
+}
+
+.image-container img {
+    border-radius: 10px;
+}
+
+
+/* tag for the card */
+.card-tag {
+    background-color: var(--Yellow);
+    width: min-content;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+
+/* card title */
+.card-title {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 1s;/* changing title  slow-out */
+}
+
+.card:has(.card-title:hover) {
+    box-shadow: 20px 20px  var(--Black);
+    transition: .3s;/* box-shadow  fast-in */
+}
+
+.card-title:hover {
+    color: var(--Yellow);
+    transition: .3s;/* changing title  fast-in */
+}
+
+
+
+/* some text from author */
+.card-text {
+    color: var(--Grey);
+}
+
+
+/* author profile pic and name */
+.card-author {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.card-author img {
+    width: 2rem;
+}
+
+
+
+/* footer */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); text-decoration: none; }
