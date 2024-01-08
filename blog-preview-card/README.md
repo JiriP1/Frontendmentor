@@ -36,7 +36,7 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
 
 ### What I learned
 
-With hover effect on element A, changing styles of element B.
+With hover effect on element A(child), changing styles of element B(parent).
 
 ```css
 .card:has(.card-title:hover) {
@@ -50,7 +50,7 @@ With hover effect on element A, changing styles of element B.
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+
 
 
 ### Useful resources

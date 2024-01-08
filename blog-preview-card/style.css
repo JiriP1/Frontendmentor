@@ -48,10 +48,10 @@ body {
 .card {
     width: min-content;
     padding: 1rem;
-    border: 1px solid var(--Black);
+    border: 0.06rem solid var(--Black);
     background-color: var(--White);
-    border-radius: 20px;
-    box-shadow: 10px 10px  var(--Black);
+    border-radius: 1.25rem;
+    box-shadow: 0.6rem 0.6rem  var(--Black);
     transition: 1s;/* box-shadow  slow-out */
     display: grid;
     gap: 1rem;
@@ -63,7 +63,7 @@ body {
 }
 
 .image-container img {
-    border-radius: 10px;
+    border-radius: 0.6rem;
 }
 
 
@@ -71,8 +71,8 @@ body {
 .card-tag {
     background-color: var(--Yellow);
     width: min-content;
-    border-radius: 3px;
-    padding: 5px;
+    border-radius: 0.2rem;
+    padding: 0.3rem;
 }
 
 
@@ -84,7 +84,7 @@ body {
 }
 
 .card:has(.card-title:hover) {
-    box-shadow: 20px 20px  var(--Black);
+    box-shadow: 1.25rem 1.25rem  var(--Black);
     transition: .3s;/* box-shadow  fast-in */
 }
 
