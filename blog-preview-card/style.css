@@ -14,7 +14,7 @@
 --Black: hsl(0, 0%, 7%);
 
     /* font */
---font-family: 'Figtree';
+--font-family: 'Figtree', (https://fonts.google.com/specimen/Figtree), Arial;
 --font-weight-semi-bold: 600;
 --font-weight-extra-bold: 800;
 }
