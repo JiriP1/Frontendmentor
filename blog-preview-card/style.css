@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@600;800&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +15,7 @@
 --Black: hsl(0, 0%, 7%);
 
     /* font */
---font-family: 'Figtree', (https://fonts.google.com/specimen/Figtree), Arial;
+--font-family: 'Figtree', sans-serif;
 --font-weight-semi-bold: 600;
 --font-weight-extra-bold: 800;
 }
