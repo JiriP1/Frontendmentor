@@ -46,8 +46,12 @@ body {
 
 
 /* card */
-.card {
+main {
     width: min-content;
+}
+
+.card {
+    width: 100%;
     padding: 1rem;
     border: 0.06rem solid var(--Black);
     background-color: var(--White);
@@ -59,12 +63,14 @@ body {
 }
 
 /* container for the image of the card */
+
 .image-container {
-    width: fit-content;
+    width: max-content;
 }
 
 .image-container img {
     border-radius: 0.6rem;
+    width: 100%;
 }
 
 
@@ -85,13 +91,13 @@ body {
 }
 
 .card:has(.card-title:hover) {
-    box-shadow: 1.25rem 1.25rem  var(--Black);
-    transition: .3s;/* box-shadow  fast-in */
+    box-shadow: 1rem 1rem  var(--Black);
+    transition: .4s;/* box-shadow  fast-in */
 }
 
 .card-title:hover {
     color: var(--Yellow);
-    transition: .3s;/* changing title  fast-in */
+    transition: .4s;/* changing title  fast-in */
 }
 
 
@@ -99,6 +105,7 @@ body {
 /* some text from author */
 .card-text {
     color: var(--Grey);
+    line-height: 1.4rem;
 }
 
 
@@ -113,8 +120,29 @@ body {
     width: 2rem;
 }
 
+/* @media screen and (max-width: 25rem) {
+    .card, footer {
+        scale: .85;
+    }
+} */
+
+
+/* trying to make it responsive */
+/* if you know better solution please tell me */
+@media screen and (max-width: 25rem) {
+    body{
+        font-size: 4.4vw; 
+    }
+    .card-title {
+        font-size: 6.3vw;
+    }
+    .image-container {
+        width: 84vw;
+    }
+}
+
 
 
 /* footer */
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 11px; width: max-content; margin: 0 auto;}
 .attribution a { color: white; text-decoration: none; }
