@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken Grotesk:wght@500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+/* Primary */
+--Light-red: hsl(0, 100%, 67%);
+--Orangey-yellow: hsl(39, 100%, 56%);
+--Green-teal: hsl(166, 100%, 37%);
+--Cobalt-blue: hsl(234, 85%, 45%);
+
+/* Gradients */
+--Light-slate-blue-background: hsl(252, 100%, 67%);
+--Light-royal-blue-background: hsl(241, 81%, 54%);
+
+--Violet-blue-circle: hsla(256, 72%, 46%, 1);
+--Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+/* Neutral */
+--White: hsl(0, 0%, 100%);
+--Pale-blue: hsl(221, 100%, 96%);
+--Light-lavender: hsl(241, 100%, 89%);
+--Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+
+/******* layout *******/
+body {
+    height: 100dvh;
+    display: grid;
+    grid-template-rows: auto min-content;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Hanken Grotesk";
+}
+
+/*-*-*- main - results card -*-*-*/
+.result-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 1.5rem;
+    box-shadow: .5rem .5rem .8rem var(--Pale-blue);
+    /* border: 2px solid red; */
+
+    transition: box-shadow 500ms;
+}
+.result-wrapper:hover,
+.result-wrapper:focus {
+    box-shadow: 1rem 1rem .8rem var(--Pale-blue);
+}
+
+/********* LEFT SIDE - YOUR RESULT **********/
+.your-result-container {
+    width: min-content;
+    padding: 2rem;
+
+    background-image: linear-gradient(var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+    border-radius: inherit;
+    /* border: 2px solid black; */
+}
+
+/***** result-header *****/
+.your-result-header {
+    font-size: 1.2rem;
+    color: var(--Light-lavender);
+    text-align: center;
+    
+    margin-block-end: 1rem;
+}
+
+/***** result-score *****/
+.your-result-score-container {
+    position: relative;
+    /* "perfect circle" */
+    width: 10rem;
+    height: 10rem;
+    margin-inline: auto;
+
+    border-radius: 50%;
+    background-image: linear-gradient(var(--Violet-blue-circle), var(--Persian-blue-circle));
+}
+.your-result-score {
+    --Light-lavender: hsla(241, 100%, 89%, 0.514);
+
+    color: var(--Light-lavender);
+    font-size: 1rem;
+    text-align: center;
+
+    /* transfer to the centre */
+    position: absolute;
+    width: min-content; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.your-result-score span{
+    /* Space between your points and the maximum number of points */
+    line-height: 1.2;
+}
+
+/***** result-message *****/
+.your-result-rating {
+    font-size: 1.8rem;
+    text-align: center;
+    
+    margin-block-end: .7rem;
+}
+
+/***** result-message *****/
+.your-result-message {
+    text-align: center;
+    min-width: 14rem;
+}
+
+
+
+/********* RIGHT SIDE - SUMMARY **********/
+.summary-container {
+    padding: 2rem;
+    /* border: 2px solid black; */
+}
+
+/***** summary-header *****/
+.summary-header {
+    font-size: 1.2rem;
+
+    margin-block-end: 1rem;
+}
+
+/***** summary-scores *****/
+.summary-scores-container {
+    margin-block-end: 2.2rem;
+}
+
+.summary-section {
+    display: flex;
+    gap: .6rem;
+    padding: 0.5rem;
+    
+    border-radius: .7rem;
+    margin-block: 1rem;
+    cursor: default;
+
+    transition: scale 500ms;
+}
+.summary-section:hover,
+.summary-section:focus {
+    /* changing background color */
+    --Pale-blue: hsl(221, 100%, 94.3%);
+    scale: 1.1;
+}
+
+/* left alignment */
+.summary-section-score {
+    margin-inline-start: auto;
+}
+
+/***** summary-button *****/
+.summary-button { 
+    text-decoration: none;
+    display: block;
+    text-align: center;
+
+    padding-block: 1rem;
+    border-radius: 2rem;
+    background-color: var(--Dark-gray-blue);
+
+    --Light-slate-blue-background: hsla(252, 100%, 67%, 0);
+    --Light-royal-blue-background: hsla(241, 81%, 54%, 0);
+    background-image: linear-gradient(var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+}
+
+.summary-button:hover,
+.summary-button:focus {
+    /* changing background color */
+    --Light-slate-blue-background: hsl(252, 100%, 67%);
+    --Light-royal-blue-background: hsl(241, 81%, 54%);
+}
+
+/* design for mobile */
+@media screen and (max-width:600px) {
+    /* making 1 column */
+    .result-wrapper {
+        grid-template-columns: 1fr;
+    }
+    /* causes it to stretch to its full width */
+    .your-result-container {
+        width: fit-content;
+    }
+
+    body {
+        align-items: start;
+    }
+    .result-wrapper {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0; 
+    }
+}
+
+/*-*-*- footer -*-*-*/
+.attribution { font-size: 11px; text-align: center; padding-block-end: .5rem;}
+.attribution a { color: hsl(228, 45%, 44%); }

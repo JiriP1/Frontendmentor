@@ -1,0 +1,45 @@
+/*:::::::::: reusable classes ::::::::::*/
+/* font */
+.fw-Medium {
+    font-weight: 500;
+}
+.fw-Bold {
+    font-weight: 700;
+}
+.fw-ExtraBold {
+    font-weight: 800;
+}
+.big-font-size {
+    font-size: 3.7rem;
+}
+
+/* background colors */
+.Pale-blue-bg-color {
+    background-color: var(--Pale-blue);
+}
+.Light-lavender-bg-color {
+    background-color: var(--Light-lavender);
+}
+.White-bg-color {
+    background-color: var(--White);
+}
+
+/* text colors */
+.white-color {
+    color: var(--White);
+}
+.Light-lavender-color {
+    color: var(--Light-lavender);
+}
+.Light-red-color {
+    color: var(--Light-red);
+}
+.Orangey-yellow-color {
+    color: var(--Orangey-yellow);
+}
+.Cobalt-blue-color {
+    color: var(--Green-teal);
+}
+.Dark-gray-blue {
+    color: var(--Cobalt-blue);
+}

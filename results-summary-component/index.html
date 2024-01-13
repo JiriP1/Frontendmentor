@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Results summary component | Frontend Mentor</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reusable-classes.css">
+
+</head>
+<body class="Light-lavender-bg-color">
+
+  <main> 
+    <div class="result-wrapper White-bg-color"> <!-- CARD -->
+      <div class="your-result-container"> <!-- LEFT SIDE - YOUR RESULT -->
+        <h1 class="your-result-header">Your Result</h1><!--title-->
+        <div class="your-result-score-container"><!--points-container-->
+          <h2 class="your-result-score"><span class="big-font-size white-color">76</span> of 100</h2><!--points-->
+        </div><!--points-container-->
+        <h3 class="your-result-rating white-color fw-Medium">Great</h3><!--rating-->
+        <p class="your-result-message white-color Light-lavender-color">You scored higher than 65% of the people who have taken these tests.</p><!--message-->
+      </div> <!-- LEFT SIDE - YOUR RESULT -->
+
+      <div class="summary-container"> <!-- RIGHT SIDE - SUMMARY -->
+        <h2 class="summary-header">Summary</h2>
+        <div class="summary-scores-container"><!-- summary-scores-container -->
+          <div class="summary-section reaction Pale-blue-bg-color"> <!--summary-section reaction-->
+            <img src="assets/images/icon-reaction.svg" alt="icon"><!--icon-->
+            <h4 class="Light-red-color fw-Medium">Reaction</h4><!--section-name-->
+            <div class="summary-section-score fw-Bold">80 <span class="Light-lavender-color">/ 100</span></div><!--points-->
+          </div> <!--summary-section reaction-->
+          <div class="summary-section memory Pale-blue-bg-color"> <!--summary-section memory-->
+            <img src="assets/images/icon-memory.svg" alt="icon"><!--icon-->
+            <h4 class="Orangey-yellow-color fw-Medium">Memory</h4><!--section-name-->
+            <div class="summary-section-score fw-Bold">92 <span class="Light-lavender-color">/ 100</span></div><!--points-->
+          </div> <!--summary-section memory-->
+          <div class="summary-section verbal Pale-blue-bg-color"> <!--summary-section verbal-->
+            <img src="assets/images/icon-verbal.svg" alt="icon"><!--icon-->
+            <h4 class="Cobalt-blue-color fw-Medium">Verbal</h4><!--section-name-->
+            <div class="summary-section-score fw-Bold">61 <span class="Light-lavender-color">/ 100</span></div><!--points-->
+          </div> <!--summary-section verbal-->
+          <div class="summary-section visual Pale-blue-bg-color"> <!--summary-section visual-->
+            <img src="assets/images/icon-visual.svg" alt="icon"><!--icon-->
+            <h4 class="Dark-gray-blue fw-Medium">Visual</h4><!--section-name-->
+            <div class="summary-section-score fw-Bold">72 <span class="Light-lavender-color">/ 100</span></div><!--points-->
+          </div> <!--summary-section visual-->
+        </div><!-- summary-scores-container -->
+        <a href="#" class="summary-button white-color">Continue</a>
+      </div> <!-- RIGHT SIDE - SUMMARY -->
+    </div><!-- CARD -->
+  </main>
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+
+</body>
+</html>
