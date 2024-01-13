@@ -7,7 +7,6 @@ This is a solution to the [Product preview card component challenge on Frontend 
 - [Overview](#overview)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
   - [Built with](#built-with)
   - [Useful resources](#useful-resources)
 
@@ -22,6 +21,7 @@ This is a solution to the [Product preview card component challenge on Frontend 
 ![desktop](./images/solution-desktop.png)
 ![mobile](./images/solution-mobile.png)
 
+### Links 
 
 - Solution URL: [Solution](https://jirip1.github.io/Frontendmentor/product-preview-card-component)
 
