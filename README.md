@@ -6,3 +6,6 @@
     - live site: [view](https://jirip1.github.io/Frontendmentor/product-preview-card-component/)
 - Results summary: [Frontendmentor](https://www.frontendmentor.io/solutions/results-summary-component-using-grid-flexbox-and-custom-properties-m-y7U6JjVo)
     - live site: [view](https://jirip1.github.io/Frontendmentor/results-summary-component)
+- Results summary: [Frontendmentor](https://www.frontendmentor.io/solutions/statspreviewcard-with-glowing-word-gYKmVyLROP)
+    - live site: [view](https://jirip1.github.io/Frontendmentor/stats-preview-card-component/)
+
