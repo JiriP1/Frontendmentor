@@ -1,0 +1,147 @@
+/* for headings */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* for body */
+@import url('https://fonts.googleapis.com/css2?family=Open Sans:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    outline: none;
+}
+
+:root {
+    --text-color: #fff;
+    --backgroung-color: hsl(257, 40%, 49%);
+    --hover-effect-color: hsl(300, 69%, 71%);
+}
+
+/** main layout **/
+body {
+    font-family: "Open Sans";
+    color: var(--text-color);
+    
+    background-color: var(--backgroung-color);
+    background-image: url(images/bg-desktop.svg);
+    height: 100dvh;
+    padding-inline: 1rem;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: auto min-content;  
+}
+
+h1, h2 {
+    font-family: Poppins;
+}
+
+/************ MAIN STYLES ************/
+
+/******** card header - logo section ********/
+/* card header image */
+.logo {
+    margin-block-end: 3rem;
+}
+
+
+/******** card section ********/
+
+/*** card container ***/
+.card {
+    max-width: fit-content;
+    display: grid;
+    grid-template-columns: minmax(31rem, 55rem) minmax(33rem ,37rem);
+    margin-block-end: 1rem;
+}
+
+/***** left side of the card - image *****/
+.image-container img {
+    width: 100%;
+}
+
+/***** right side of the card - content *****/
+.content-container {
+    padding: 3rem;
+}
+
+/*** card header ***/
+.card-header {
+    /* font-size: 2.5rem; */
+    font-weight: 600;
+    margin-block-end: 2rem;
+}
+
+/*** card text ***/
+.content-container p {
+    margin-block-end: 3rem;
+}
+
+/*** card button ***/
+.button {
+    text-decoration: none;
+    color: hsl(257, 40%, 49%);
+    background-color: #fff;
+    border-radius: 2rem;
+    padding: 1rem 4rem;
+
+    transition: all 500ms;
+}
+.button:hover,
+.button:focus {
+    color: #fff;
+    background-color: var(--hover-effect-color);
+}
+
+
+/******** card footer - link section ********/
+
+/*** links container ***/
+.links {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1.5rem;
+}
+/*** Links ***/
+.links a img {
+    width: 2.5rem;
+    border: 2px solid black;
+    border-radius: 50%;
+    filter: invert();
+    padding: .4rem;
+}
+.links a img:hover,
+.links a:focus {
+    filter: invert(87%) sepia(15%) saturate(6814%) hue-rotate(249deg) brightness(95%) contrast(91%); /* https://codepen.io/sosuke/pen/Pjoqqp */
+}
+
+
+/************ WEB FOOTER STYLES ************/
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(0, 0%, 100%); }
+
+
+/** for mobile and another smaller devices **/
+@media screen and (max-width:66rem) {
+    /*changing layout*/
+    .card {
+        max-width: fit-content;
+        display: grid;
+        grid-template-columns: minmax(20rem ,37rem);
+        grid-template-rows: auto 1fr;
+    }
+    /*making more space for text*/
+    .content-container {
+        text-align: center;
+        padding: 1rem;
+    }
+    /*center alignment*/
+    .links {
+        justify-content: center;
+    }
+}
+
+
+
