@@ -10,4 +10,5 @@
     - live site: [view](https://jirip1.github.io/Frontendmentor/stats-preview-card-component/)
 - huddle-landing-page-with-single-introductory-section: [Frontendmentor](https://www.frontendmentor.io/solutions/huddle-landing-page-using-grid-and-flexbox-cCQK7t_kwg)
     - live site: [view](https://jirip1.github.io/Frontendmentor/huddle-landing-page-with-single-introductory-section/)
-
+- four-card-feature-section: [Frontendmentor](https://www.frontendmentor.io/solutions/fourcardfeaturesection-sqmTfiD13K)
+    - live site: [view](https://jirip1.github.io/Frontendmentor/four-card-feature-section/)
