@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --supervisor-card-upper-line-color: hsl(180, 62%, 55%);
+    --team-builder-card-upper-line-color: hsl(0, 78%, 62%);
+    --karma-card-upper-line-color: hsl(34, 97%, 64%);
+    --calculator-card-upper-line-color: hsl(212, 86%, 64%);
+    --cards-shadow-color: hsl(229, 6%, 66%);
+
+    --body-background-color: hsl(0, 0%, 98%);
+    --introductory-section-headers-color: hsl(234, 12%, 34%);
+    --introductory-section-paragraphs-color: hsl(229, 6%, 66%);
+}
+
+
+body {
+    font-size: .9rem;
+    font-family: Poppins;
+    background-color: var(--body-background-color);
+    padding: 1rem;
+
+    /**** main layout *****/
+    height: 100dvh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: auto min-content;
+}
+
+
+/********** introductory-section **********/
+/* text colors */
+.introductory-section h1, h2 {
+    color: var(--introductory-section-headers-color);
+}
+.introductory-section p {
+    color: var(--introductory-section-paragraphs-color);
+}
+
+/****** text of the introductory-section *******/
+.introductory-section-text {
+    /* border: 2px solid red; */
+    max-width: 55ch;
+    text-align: center;
+    margin-inline: auto;
+    margin-block-end: 4em;
+}
+
+/***** header *****/
+.introductory-section-text h1 {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 1.8em;
+    line-height: 1.2;
+    max-width: 21ch;
+    margin-block-end: .5em;
+}
+.introductory-section-text h1 span {
+    font-weight: 600;
+}
+
+/***** content ******/
+.introductory-section-text p {
+    font-size: .9em;
+    font-weight: 400;
+}
+
+
+/****** introductory-section cards *******/
+.cards-wrapper {
+    display: grid;
+    justify-content: center;
+    grid-template-areas:
+        "   ...     team-builder    ...    "
+        "supervisor team-builder calculator"
+        "supervisor     karma    calculator"
+        "   ...         karma    ...    "
+    ;
+}
+
+/***** cards *****/
+.card {
+    max-width: 40ch;
+    background-color: #fff;
+    box-shadow: 0 5px 15px -8px var(--cards-shadow-color);
+    border-radius: 0 0 .7em .7em;
+    padding: 1.6em;
+    margin: 1em;
+
+    position: relative;
+}
+
+/***** cards upper line*****/
+.card::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: 5px;
+    z-index: -1;
+    border-radius: .7em;
+    background-color: var(--upper-line);
+}
+
+/* changing upper line color and layout settings */
+.supervisor-card {
+    --upper-line: var(--supervisor-card-upper-line-color);
+    grid-area: supervisor;
+}
+
+.team-builder-card {
+    --upper-line: var(--team-builder-card-upper-line-color);
+    grid-area: team-builder;
+}
+
+.karma-card {
+    --upper-line: var(--karma-card-upper-line-color);
+    grid-area: karma;
+}
+
+.calculator-card {
+    --upper-line: var(--calculator-card-upper-line-color);
+    grid-area: calculator;
+
+}
+
+/***** card header *****/
+.card h2 {
+    font-weight: 600;
+}
+
+/***** card content *****/
+.card p {
+    font-weight: 400;
+    margin-block-start: .5em;
+}
+
+/***** card image *****/
+.card img {
+    display: block;
+    margin-inline-start: auto;
+    margin-block-start: 2.2em;
+}
+
+
+
+@media screen and (width < 73rem) {
+    .cards-wrapper {
+        grid-template-areas:
+            "    supervisor   "
+            "   team-builder  "
+            "       karma     "
+            "    calculator   "
+        ;
+        /* border: 2px solid red; */
+    }
+}
+
+
+/* footer */
+.attribution { font-size: 11px; text-align: center; margin-bottom: 1em;}
+.attribution a { color: hsl(228, 45%, 44%); }
