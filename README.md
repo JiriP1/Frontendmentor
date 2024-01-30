@@ -12,3 +12,7 @@
     - live site: [view](https://jirip1.github.io/Frontendmentor/huddle-landing-page-with-single-introductory-section/)
 - four-card-feature-section: [Frontendmentor](https://www.frontendmentor.io/solutions/fourcardfeaturesection-sqmTfiD13K)
     - live site: [view](https://jirip1.github.io/Frontendmentor/four-card-feature-section/)
+ - page-with-recipe: [Frontendmentor](https://www.frontendmentor.io/solutions/recipepage-with-burger-images-NaCe8x6Tls)
+    - live site: [view](https://jirip1.github.io/Frontendmentor/recipe-page/)
+
+
