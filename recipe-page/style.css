@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Young Serif:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --preparation-time-header: hsl(332, 51%, 32%);
+    --preparation-background-color: hsl(330, 100%, 98%);
+    --sections-headers-nutritions-and-indent-color: hsl(14, 45%, 36%);
+    --text-color: hsl(30, 10%, 34%);
+    --text-before-colon-color: hsl(24, 5%, 18%);
+
+    --recipe-background-color: hsl(0, 0%, 100%);
+    --body-background-color: hsl(30, 54%, 90%);
+    --underline-color: hsl(30, 18%, 87%);
+    
+    
+}
+
+/* main layout */
+body {
+    font-family: outfit;
+    background-color: var(--body-background-color);
+
+    height: 100dvh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: auto min-content;
+}
+
+/* -------------------- */
+hr {
+    border-top: 1px solid var(--underline-color);
+}
+
+/********** recipe container **********/
+.recipe {
+    max-width: 68ch;
+    background-color: var(--recipe-background-color);
+    border-radius: 1rem;
+    padding: 2.6rem;
+    margin-block: 5rem;
+}
+
+/********** some adjustments for smaller devices **********/
+@media screen and (width < 47rem) {
+    .recipe {
+        border-radius: 0;
+        padding: 1.7rem;
+        margin-block: 0; 
+    }
+}
+
+/********** margin top and bottom for all childs of recipe container **********/
+.recipe > *:not(.omelette-image) {
+    margin-block: 1.2rem;
+}
+
+/********** main recipe image **********/
+.omelette-image {
+    max-width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 0 1em -0.6em #000;
+}
+
+/********** main recipe header **********/
+.main-header {
+    font-size: 2em;
+}
+
+/********** styling headers and text font, color, etc. **********/
+h1, h2 {
+    font-family: "Young Serif";
+    font-weight: 400;
+}
+
+/********** color for normal text **********/
+p, li {
+    color: var(--text-color);
+}
+
+/********** adding left aligment to lists **********/
+ul, ol {
+    padding-inline-start: 1em;
+}
+
+/********** styling all list markers **********/
+li::marker {
+    font-weight: 600;
+    color: var(--sections-headers-nutritions-and-indent-color);
+} 
+
+/********** adding some indentation for all list items **********/
+ul li, ol li {
+    padding-inline-start: 1em;
+    margin-block: .5em;
+}
+
+/* ? */
+.recipe ul li {
+    list-style-image: url(assets/images/hamburger-16.gif);
+}
+/* ? */
+
+/********** styling sections headers **********/
+.section-header{
+    font-size: 1.6em;
+    color: var(--sections-headers-nutritions-and-indent-color);
+    margin-block-end: .7rem;
+}
+
+
+/********** preparation time **********/
+.preparaion-time {
+    background-color: var(--preparation-background-color);
+    padding: 1rem 2.5rem;
+    border-radius: .7rem;
+    
+}
+/* header */
+.preparaion-time h3 {
+    color: var(--preparation-time-header);
+    font-size: 1.3rem;
+    margin-block-end: .7rem;
+}
+/* list items */
+.preparaion-time ul li {
+    padding-inline-start: .6rem;
+    margin-block: .3em;
+}
+/* text before colon */
+.preparaion-time ul li .bold-text {
+    font-weight: 600;
+}
+
+
+/********** styling instructions list **********/
+.instructions ol li span {
+    font-weight: 600;
+    color: var(--text-before-colon-color);
+}
+
+
+/********** nutrition table **********/
+.nutrition table,
+.nutrition caption {
+    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+    margin-block-end: .8em;
+}
+
+/* ? */
+.nutrition tr:nth-child(even) {
+    background-color: hsla(0, 21%, 92%, 0.096);
+}
+/* ? */
+
+/* underline and space for table content */
+.nutrition td, th {
+    border-bottom: 1px solid var(--underline-color); /** underline **/
+    padding: 1.1em;
+}
+
+/** data on the right side **/
+.nutrition td {
+    font-weight: 600;
+    color: var(--sections-headers-nutritions-and-indent-color); 
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
