@@ -14,5 +14,6 @@
     - live site: [view](https://jirip1.github.io/Frontendmentor/four-card-feature-section/)
  - page-with-recipe: [Frontendmentor](https://www.frontendmentor.io/solutions/recipepage-with-burger-images-NaCe8x6Tls)
     - live site: [view](https://jirip1.github.io/Frontendmentor/recipe-page/)
-
+ - social proof section: [Frontendmentor](https://www.frontendmentor.io/solutions/social-proof-section-using-grid-YKTctAt4kg)
+    - live site: [view](https://jirip1.github.io/Frontendmentor/social-proof-section/)
 
