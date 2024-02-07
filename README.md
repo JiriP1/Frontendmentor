@@ -16,4 +16,5 @@
     - live site: [view](https://jirip1.github.io/Frontendmentor/recipe-page/)
  - social proof section: [Frontendmentor](https://www.frontendmentor.io/solutions/social-proof-section-using-grid-YKTctAt4kg)
     - live site: [view](https://jirip1.github.io/Frontendmentor/social-proof-section/)
-
+ - FAQ accordion: [Frontendmentor](https://www.frontendmentor.io/solutions/faqaccordion-eTXJ6C-y47)
+    - live site: [view](https://jirip1.github.io/Frontendmentor/FaQ-accordion/)
