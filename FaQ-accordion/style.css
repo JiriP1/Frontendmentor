@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Work Sans:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --page-lower-background-color: hsl(274, 73%, 96%);
+    --card-background-color: hsl(0, 0%, 100%);
+    --lines-between-questions-in-card: hsl(276, 100%, 97%);
+    --question-hover-text-color: rgb(173 40 235);
+    --answer-text-color: hsl(292, 16%, 49%);
+    --bold-text-color: hsl(292, 42%, 14%);
+}
+
+/***** main layout *****/
+body {
+    font-family: "Work Sans";
+    background-color: var(--page-lower-background-color);
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 2rem;
+
+    height: 100dvh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: auto min-content;
+}
+/* changing backgrond image for small devices */
+@media screen and (width < 900px) {
+    body {
+        background-image: url(assets/images/background-pattern-mobile.svg);
+    }
+}
+
+
+/** reusable class **/
+.hide {
+    display: none;
+}   
+
+
+/* ---------card section----------*/
+/* container */
+main {
+    background-color: var(--card-background-color);
+    border-radius: 1em;
+    max-width: 60ch;
+    padding: 1.25em;
+}
+
+/* ---------card header section----------*/
+/* container */
+.card-header {
+    display: flex;
+    gap: 1em;
+
+    /* styling h1 */
+    & h1 {
+        font-size: 3.5em;
+        color: var(--bold-text-color);
+    }
+}
+
+/* ---------question section----------*/
+/* container */
+.question {
+    margin-block: 1em;
+
+    /* eliminating first question and selecting others */
+    &:not(:first-child) {
+        border-top: 2px solid var(--lines-between-questions-in-card);
+    }
+
+    /*question header */
+    .question-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        /* header text */
+        & h4 {
+            cursor: pointer;
+            color: var(--bold-text-color);
+            margin-block: 1em;
+
+            transition: color 250ms ease-in-out;
+
+            /* header text hover*/
+            &:hover {
+                color: var(--question-hover-text-color);
+            }
+        }
+    }
+    
+    /* answer */
+    .answer {
+        color: var(--answer-text-color);
+    }
+}
+
+
+/* ---------button section----------*/
+.show_button, .hide_button {
+    transition: transform 450ms;
+
+    /** mouse **/
+    &:hover img{
+        transform: scale(1.15);
+    }
+
+    /** keybord **/
+    &:focus{
+        outline: none;
+        
+        /* styling img whent it is focused by keybord */
+        & img {
+            border-radius: 50%;
+            border: 1px solid rgb(255, 0, 200);
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+/* ---------footer section----------*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
