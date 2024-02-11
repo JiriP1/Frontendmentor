@@ -18,3 +18,5 @@
     - live site: [view](https://jirip1.github.io/Frontendmentor/social-proof-section/)
  - FAQ accordion: [Frontendmentor](https://www.frontendmentor.io/solutions/faqaccordion-eTXJ6C-y47)
     - live site: [view](https://jirip1.github.io/Frontendmentor/FaQ-accordion/)
+ - interactive-rating-component: [Frontendmentor](https://www.frontendmentor.io/solutions/interactiveratingcomponent-JpQn0vGgvM)
+    - live site: [view](https://jirip1.github.io/Frontendmentor/interactive-rating-component/)
