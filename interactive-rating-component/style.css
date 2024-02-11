@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --page-background-color: hsl(216, 12%, 8%);
+
+    --card-background-gradient-color-1: hsl(214, 18%, 18%);
+    --card-background-gradient-color-2: hsl(212, 21%, 16%);
+
+    --card-header-color: hsl(0, 0%, 100%);
+    --card-subtitle-color: hsl(216, 12%, 54%);
+
+    --card-rating-button-background-color: hsla(213, 13%, 27%, 0.603);
+    --card-rating-button-background-color-active: hsl(25, 97%, 53%);
+    --card-rating-button-text-color: hsl(216, 12%, 54%);
+    --card-rating-button-text-color-active: hsl(0, 0%, 100%);
+    --card-rating-button-background-color-selected: hsl(216, 12%, 54%);
+    --card-rating-button-text-color-selected: hsl(0, 0%, 100%);
+
+    --submit-button-background-color: hsl(25, 97%, 53%);
+    --submit-button-background-color-active: hsl(0, 0%, 100%);
+    --submit-button-text-color: hsl(0, 0%, 100%);
+    --submit-button-text-color-active: hsl(25, 97%, 53%);
+
+    --card-summary-background-color: hsla(213, 13%, 27%, 0.603);
+    --card-summary-text-color: hsla(25, 100%, 56%, 0.61);
+}
+
+/* reusable classes */
+.hide {
+    display: none;
+}
+
+
+body {
+    font-size: .9rem;
+    font-family: Overpass;
+
+    background-color: var(--page-background-color);
+
+    /**** main layout *****/
+    height: 100dvh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: auto min-content;
+}
+
+/*---------- card ----------*/
+.card {
+    background: linear-gradient(var(--card-background-gradient-color-1), var(--card-background-gradient-color-2));
+    max-width: 40ch;
+    padding: 2em;
+    border-radius: 1.5em;
+
+    /*---------- rating section ----------*/
+    .rating-section {
+        
+        /*---------- trying to make circle ----------*/
+        .circle {
+            border-radius: 50%;
+            background-color: var(--card-rating-button-background-color);
+            color: var(--card-rating-button-text-color);
+    
+            /* making circle*/
+            width: 3em;
+            height: 3em;
+            /* trying to center things*/
+            display: grid;
+            place-items: center;
+            
+        }
+    
+        /*----- title -----*/
+        & h1 {
+            color: var(--card-header-color);
+            margin-block-start: 1em;
+            
+            /*----- subtitle -----*/
+            + p {
+                color: var(--card-subtitle-color);
+                margin-block-start: .5em;
+            }
+        }
+        
+        /*---------- rating button container ----------*/
+        .rating-button-container {
+            display: flex;
+            justify-content: space-between;
+    
+            cursor: pointer;
+    
+            font-size: 1em;
+            
+            /*----- rating button -----*/
+            .rating-button {
+                margin-block: 1.7em;
+                
+                &:hover {
+                    background-color: var(--card-rating-button-background-color-active);
+                    color: var(--card-rating-button-text-color-active);
+                }
+            }
+
+            /* changing background when "selected" */
+            .selected {
+                background-color: var(--card-rating-button-background-color-selected);
+                color: var(--card-rating-button-text-color-selected);
+            }
+        }
+        
+
+        /*---------- submit button ----------*/
+        .submit-button {
+            color: var(--submit-button-text-color);
+            background-color: var(--submit-button-background-color);
+            
+            cursor: pointer;
+            display: block;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            padding-block: .7em;
+            border-radius: 2em;
+
+            transition: opacity 500ms, background-color 350ms, color 350ms;
+
+            &:hover {
+                color: var(--submit-button-text-color-active);
+                background-color: var(--submit-button-background-color-active);
+            }
+        }
+    }
+    
+    /*---------- thank you section ----------*/
+    .thank-you-section {
+        text-align: center;
+
+        /*----- user rating -----*/
+        .summary {
+            background-color: var(--card-summary-background-color);
+            color: var(--card-summary-text-color);
+            width: fit-content;
+            display: inline-block;
+            padding: .5em 1em;
+            border-radius: 2em;
+            margin-block: 1.6em;
+        }
+        
+        /*----- title -----*/
+        & h2 {
+            color: var(--card-header-color);
+            
+            /*----- subtitle -----*/
+            + p {
+                color: var(--card-subtitle-color);
+                text-align: center;
+                padding-block: .9em;
+            }
+        }
+    }
+}
+
+
+
+/*---------- footer ----------*/
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
