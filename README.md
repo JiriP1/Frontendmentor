@@ -4,7 +4,7 @@
 
 2. [product preview card](#product-preview-card)  
 
-3. [Results summary card](#Results-summary-card)  
+3. [results summary card](#results-summary-card)  
 
 4. [stats preview card](#stats-preview-card)  
 
@@ -16,9 +16,11 @@
 
 8. [social proof section](#social-proof-section)  
 
-9. [FAQ accordion](#FAQ-accordion)  
+9. [FAQ accordion](#faq-accordion)  
 
 10. [interactive rating component](#interactive-rating-component)  
+
+11. [intro-component-with-signup-form](#intro-component-with-signup-form)  
 
 ---
 
@@ -32,7 +34,7 @@
 - [Frontendmentor](https://www.frontendmentor.io/solutions/product-preview-card-using-css-grid-and-custom-properties-O8IN4mjwlS)
 - [live site](https://jirip1.github.io/Frontendmentor/product-preview-card-component/)
 
-## Results summary card
+## results summary card
 
 - [Frontendmentor](https://www.frontendmentor.io/solutions/results-summary-component-using-grid-flexbox-and-custom-properties-m-y7U6JjVo)
 - [live site](https://jirip1.github.io/Frontendmentor/results-summary-component)
@@ -67,7 +69,12 @@
 - [Frontendmentor](https://www.frontendmentor.io/solutions/faqaccordion-eTXJ6C-y47)
 - [live site](https://jirip1.github.io/Frontendmentor/FaQ-accordion/)
 
-## interactive-rating-component
+## interactive rating component
 
 - [Frontendmentor](https://www.frontendmentor.io/solutions/interactiveratingcomponent-JpQn0vGgvM)
 - [live site](https://jirip1.github.io/Frontendmentor/interactive-rating-component/)
+
+## intro component with signup form
+
+- [Frontendmentor](https://www.frontendmentor.io/solutions/interactiveratingcomponent-JpQn0vGgvM)
+- [live site](https://jirip1.github.io/Frontendmentor/intro-component-with-signup-form/)  

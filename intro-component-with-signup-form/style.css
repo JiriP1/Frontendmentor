@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --page-background-color: hsl(0, 100%, 74%);
+    --page-text-color: hsl(0, 0%, 100%);
+
+    --form-background-color: hsl(0, 0%, 100%);
+    --offer-background-color: hsl(248, 32%, 49%);
+
+    /* text */
+    --form-input-value-color: hsl(249, 10%, 26%);
+    --form-input-placeholder-color: hsla(249, 10%, 26%, 0.712);
+    --form-error-message-text-color: hsl(0, 100%, 74%);
+
+    /* border */
+    --form-input-border-color: hsl(246, 25%, 77%);
+    --form-input-border-color-active: hsl(248, 32%, 49%);
+    --form-input-border-color-error: hsl(0, 100%, 74%);
+
+    /*submit button */
+    --submit-button-border-box-shaddow-color: hsla(154, 63%, 46%, 0.74);
+    --submit-button-background-color: hsl(154, 59%, 51%);
+    --submit-button-background-color-hover:rgb(99, 223, 169);
+
+    --form-reminder-text-color: hsl(246, 22%, 72%);
+    --form-reminder-a-color: hsl(0, 100%, 62%);
+
+
+}
+
+a:focus {
+    outline: 1px solid hsl(145, 100%, 50%);
+    border-radius: .5em;
+}
+
+
+body {
+    font-family: Poppins;
+    color: var(--page-text-color);
+
+    background-color: var(--page-background-color);
+    background-image: url(images/bg-intro-desktop.png);
+
+    /**** main layout *****/
+    height: 100dvh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: auto min-content;
+
+    padding: 1em;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+}
+
+
+.text-wrapper {
+    max-width: 50ch;
+}
+
+.text-wrapper h1 {
+    font-size: 2.4em;
+    margin-bottom: .5em;
+}
+
+
+
+.offer {
+    background-color: var(--offer-background-color);
+    text-align: center;
+    padding-block: 1em;
+    border-radius: .5em;
+    font-size: .9em;
+
+    box-shadow: 0 .5em rgba(0, 0, 0, 0.137);
+
+    margin-bottom: 1.5em;
+
+    & a {
+        color: var(--page-text-color);
+        text-decoration: none;
+    }
+}
+
+.sign-up-form {
+    color: var(--form-reminder-text-color);
+    text-align: center;
+
+    box-shadow: 0 .5em rgba(0, 0, 0, 0.137);
+
+    background-color: var(--form-background-color);
+    padding: 2em;
+    border-radius: .5em;
+}
+
+
+.input-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+
+    padding: .5em;
+    border-radius: .5em;
+    border: 1px solid var(--form-input-border-color);
+
+    margin-bottom: 1.5em;
+
+    transition: box-shadow 300ms;
+    }
+
+  .sign-up-form-input {
+    outline: none;
+    border: none;
+    color: var(--form-input-value-color);
+    font-weight: 600;
+    font-family: Poppins;
+
+    width: 100%;
+  }
+  .sign-up-form-input::placeholder {
+    font-family: Poppins;
+    font-weight: 600;
+    color: var(--form-input-placeholder-color);
+  }
+  .input-wrapper [alt="exclamation mark"] {
+    display: none;
+    position: absolute;
+    right: 3%;
+  }
+  .error-message{
+    display: none;
+    font-size: .7em;
+    font-style: italic;
+    color: var(--form-error-message-text-color);
+
+    position: absolute;
+    right: 0;
+    bottom: -2em;
+  }
+
+  .input-wrapper:has(.sign-up-form-input:focus) {
+    border-color: var(--form-input-border-color-active);
+
+    box-shadow: .3em .3em rgba(0, 0, 0, 0.137);
+  }
+
+
+[type="submit"] {
+    cursor: pointer;
+    padding: 1em;
+    border-radius: .5em;
+    background-color: var(--submit-button-background-color);
+    text-transform: uppercase;
+    word-spacing: .1em;
+
+    color: var(--page-text-color);
+    border: 2px solid var(--submit-button-border-box-shaddow-color-color);
+    margin-bottom: .7em;
+}
+
+[type="submit"]:hover,
+[type="submit"]:focus {
+    background-color: var(--submit-button-background-color-hover);
+
+    box-shadow: .2em .3em var(--submit-button-border-box-shaddow-color);
+}
+
+.reminder {
+    font-size: .65em;
+    font-weight: 500;
+}
+
+.reminder a {
+    text-decoration: none;
+    color: var(--form-reminder-a-color);
+}
+
+
+@media screen and (width < 720px){
+    body {
+        background-image: url(images/bg-intro-mobile.png);
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        
+    }
+
+    .text-wrapper {
+        text-align: center;
+    }
+}
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

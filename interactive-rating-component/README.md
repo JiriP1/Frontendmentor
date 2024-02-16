@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://jirip1.github.io/Frontendmentor/interactive-rating-component](https://jirip1.github.io/Frontendmentor/interactive-rating-component) 
+- Live Site URL: [https://jirip1.github.io/Frontendmentor/interactive-rating-component](https://jirip1.github.io/Frontendmentor/interactive-rating-component)
 
 ## My process
 
