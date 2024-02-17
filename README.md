@@ -76,5 +76,5 @@
 
 ## intro component with signup form
 
-- [Frontendmentor](https://www.frontendmentor.io/solutions/interactiveratingcomponent-JpQn0vGgvM)
+- [Frontendmentor](https://www.frontendmentor.io/solutions/intro-component-d4BDxwR4ex)
 - [live site](https://jirip1.github.io/Frontendmentor/intro-component-with-signup-form/)  

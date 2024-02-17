@@ -7,11 +7,14 @@
 }
 
 :root {
+    font-family: Poppins;
+    color: var(--page-text-color);
+
     --page-background-color: hsl(0, 100%, 74%);
     --page-text-color: hsl(0, 0%, 100%);
 
-    --form-background-color: hsl(0, 0%, 100%);
     --offer-background-color: hsl(248, 32%, 49%);
+    --form-background-color: hsl(0, 0%, 100%);
 
     /* text */
     --form-input-value-color: hsl(249, 10%, 26%);
@@ -41,8 +44,6 @@ a:focus {
 
 
 body {
-    font-family: Poppins;
-    color: var(--page-text-color);
 
     background-color: var(--page-background-color);
     background-image: url(images/bg-intro-desktop.png);
@@ -58,6 +59,7 @@ body {
 }
 
 main {
+    /* border: 2px solid red; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -65,35 +67,42 @@ main {
     gap: 3em;
 }
 
-
+/********** title and text under title (don't know what to call it) **********/
 .text-wrapper {
     max-width: 50ch;
 }
 
+/* title */
 .text-wrapper h1 {
     font-size: 2.4em;
     margin-bottom: .5em;
 }
 
 
-
+/***************************** form *****************************/
 .offer {
-    background-color: var(--offer-background-color);
-    text-align: center;
-    padding-block: 1em;
-    border-radius: .5em;
     font-size: .9em;
+    color: var(--page-text-color);
+    text-decoration: none;
 
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding-block: 1em;/* top and bottom */
+
+    background-color: var(--offer-background-color);
+    border-radius: .5em;
+    
     box-shadow: 0 .5em rgba(0, 0, 0, 0.137);
 
     margin-bottom: 1.5em;
-
-    & a {
-        color: var(--page-text-color);
-        text-decoration: none;
-    }
+}
+/* text in span in offer */
+.fw-600 {
+    font-weight: 600;
 }
 
+/* the form itself */
 .sign-up-form {
     color: var(--form-reminder-text-color);
     text-align: center;
@@ -105,10 +114,10 @@ main {
     border-radius: .5em;
 }
 
-
+/* wrapper (input, error message and exclamation mark) */
 .input-wrapper {
     position: relative;
-    display: block;
+
     width: 100%;
 
     padding: .5em;
@@ -118,29 +127,36 @@ main {
     margin-bottom: 1.5em;
 
     transition: box-shadow 300ms;
-    }
+}
+/* input */
+.sign-up-form-input {
+    width: 100%;
 
-  .sign-up-form-input {
     outline: none;
     border: none;
+
     color: var(--form-input-value-color);
     font-weight: 600;
     font-family: Poppins;
-
-    width: 100%;
-  }
-  .sign-up-form-input::placeholder {
-    font-family: Poppins;
+}
+.sign-up-form-input::placeholder {
+    /* font-family: Poppins; */
     font-weight: 600;
     color: var(--form-input-placeholder-color);
-  }
-  .input-wrapper [alt="exclamation mark"] {
+}
+
+/* exclamation mark */
+.input-wrapper [alt="exclamation mark"] {
     display: none;
+
     position: absolute;
     right: 3%;
-  }
-  .error-message{
+}
+
+/* error message */
+.error-message{
     display: none;
+
     font-size: .7em;
     font-style: italic;
     color: var(--form-error-message-text-color);
@@ -148,28 +164,30 @@ main {
     position: absolute;
     right: 0;
     bottom: -2em;
-  }
+}
 
-  .input-wrapper:has(.sign-up-form-input:focus) {
+/* box shadow of the INPUT wrapper */
+.input-wrapper:has(.sign-up-form-input:focus) {
     border-color: var(--form-input-border-color-active);
 
     box-shadow: .3em .3em rgba(0, 0, 0, 0.137);
-  }
+}
 
-
+/* submit button */
 [type="submit"] {
     cursor: pointer;
-    padding: 1em;
-    border-radius: .5em;
-    background-color: var(--submit-button-background-color);
+
+    color: var(--page-text-color);
     text-transform: uppercase;
     word-spacing: .1em;
 
-    color: var(--page-text-color);
+    padding: 1em;
     border: 2px solid var(--submit-button-border-box-shaddow-color-color);
+    border-radius: .5em;
+    background-color: var(--submit-button-background-color);
+
     margin-bottom: .7em;
 }
-
 [type="submit"]:hover,
 [type="submit"]:focus {
     background-color: var(--submit-button-background-color-hover);
@@ -177,18 +195,19 @@ main {
     box-shadow: .2em .3em var(--submit-button-border-box-shaddow-color);
 }
 
+/* reminder (under the submit button) */
 .reminder {
     font-size: .65em;
     font-weight: 500;
 }
-
+/* "Terms and Services" */
 .reminder a {
     text-decoration: none;
     color: var(--form-reminder-a-color);
 }
 
 
-@media screen and (width < 720px){
+@media screen and (width < 47rem){
     body {
         background-image: url(images/bg-intro-mobile.png);
     }
@@ -203,8 +222,6 @@ main {
     }
 }
 
-
-
-
+/* footer */
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
