@@ -30,8 +30,7 @@ Users should be able to:
 
 ![desktop](./screenshots/solution-desktop-state-1.png)
 ![desktop](./screenshots/solution-desktop-state-2.png)
-![desktop](./screenshots/solution-desktop-state-3.png)
-![mobile](./screenshots/solution-mobile-state.png)
+![mobile](./screenshots/solution-mobile.png)
 
 ### Links
 
